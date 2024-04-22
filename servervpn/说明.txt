@@ -1,0 +1,17 @@
+sc create <service_name> binPath= "<frp_path>\frpc.exe -c <frp_path>\frpc.ini" DisplayName= "FRP Service"
+sc create <service_name> binPath= "<frp_path>\frpc.exe -c <frp_path>\frpc.ini" DisplayName= "FRP Service"
+sc start <service_name>
+sc start <service_name>
+
+
+
+
+sc create servervpns binPath= "C:\servervpn\servervpns.exe -c C:\servervpn\servervpns.toml" DisplayName= "vpn Service"
+sc.exe create servervpns binPath= "C:\servervpn\servervpns.exe -c C:\servervpn\servervpns.toml" DisplayName= "vpn Service"
+C:\works\share\nssm\nssm-2.24\nssm-2.24\win64\nssm.exe install servervpns "C:\servervpn\servervpns.exe" "C:\servervpn\servervpns.toml"
+C:\works\share\nssm\nssm-2.24\nssm-2.24\win64\nssm.exe install servervpns "C:\servervpn\servervpns.exe" "-c C:\servervpn\servervpns.toml"
+C:\works\share\nssm\nssm-2.24\nssm-2.24\win64\nssm.exe install servervpns "C:\servervpn\servervpns.exe" "-c C:\servervpn\servervpns.toml"
+
+
+
+sc start servervpns
